@@ -2,10 +2,10 @@
 title: "My title"
 subtitle: "My subtitle if needed"
 author: 
-  - First author
+  - Zhongyu Huang
   - Another author
-thanks: "Code and data are available at: LINK."
-date: "`r format(Sys.time(), '%d %B %Y')`"
+thanks: "Code and data are available at: https://github.com/zhongyuhuang/GSS_Analysis.git"
+date: "`r format(Sys.time(), '%19 %3 %2022')`"
 abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
 output:
   bookdown::pdf_document2
