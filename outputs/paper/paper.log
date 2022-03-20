@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.20)  20 MAR 2022 15:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.20)  20 MAR 2022 18:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -476,49 +476,46 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 112.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 112.
-
-LaTeX Warning: Reference `first-discussion-point' on page 1 undefined on input line 119.
-
 [1
 
-{c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<paper_files/figure-latex/characteristics-1.pdf, id=83, 722.7pt x 722.7pt>
+{c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+<paper_files/figure-latex/characteristics-1.pdf, id=86, 722.7pt x 722.7pt>
 File: paper_files/figure-latex/characteristics-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/characteristics-1.pdf>
-Package pdftex.def Info: paper_files/figure-latex/characteristics-1.pdf  used on input line 198.
+Package pdftex.def Info: paper_files/figure-latex/characteristics-1.pdf  used on input line 202.
 (pdftex.def)             Requested size: 469.76045pt x 469.76045pt.
 
-LaTeX Warning: Reference `fig:m' on page 2 undefined on input line 202.
+LaTeX Warning: Reference `fig:m' on page 3 undefined on input line 206.
 
-<paper_files/figure-latex/LegalVSIllegal-1.pdf, id=85, 361.35pt x 216.81pt>
+<paper_files/figure-latex/LegalVSIllegal-1.pdf, id=88, 361.35pt x 216.81pt>
 File: paper_files/figure-latex/LegalVSIllegal-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/LegalVSIllegal-1.pdf>
-Package pdftex.def Info: paper_files/figure-latex/LegalVSIllegal-1.pdf  used on input line 206.
+Package pdftex.def Info: paper_files/figure-latex/LegalVSIllegal-1.pdf  used on input line 210.
 (pdftex.def)             Requested size: 361.34912pt x 216.80946pt.
-<paper_files/figure-latex/m-1.pdf, id=86, 722.7pt x 361.35pt>
+<paper_files/figure-latex/m-1.pdf, id=89, 722.7pt x 361.35pt>
 File: paper_files/figure-latex/m-1.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/m-1.pdf>
-Package pdftex.def Info: paper_files/figure-latex/m-1.pdf  used on input line 210.
+Package pdftex.def Info: paper_files/figure-latex/m-1.pdf  used on input line 214.
 (pdftex.def)             Requested size: 469.76045pt x 234.88023pt.
-<paper_files/figure-latex/m-2.pdf, id=87, 722.7pt x 361.35pt>
+<paper_files/figure-latex/m-2.pdf, id=90, 722.7pt x 361.35pt>
 File: paper_files/figure-latex/m-2.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/m-2.pdf>
-Package pdftex.def Info: paper_files/figure-latex/m-2.pdf  used on input line 210.
+Package pdftex.def Info: paper_files/figure-latex/m-2.pdf  used on input line 214.
 (pdftex.def)             Requested size: 469.76045pt x 234.88023pt.
-<paper_files/figure-latex/m-3.pdf, id=88, 722.7pt x 361.35pt>
+<paper_files/figure-latex/m-3.pdf, id=91, 722.7pt x 361.35pt>
 File: paper_files/figure-latex/m-3.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/m-3.pdf>
-Package pdftex.def Info: paper_files/figure-latex/m-3.pdf  used on input line 210.
+Package pdftex.def Info: paper_files/figure-latex/m-3.pdf  used on input line 214.
 (pdftex.def)             Requested size: 469.76045pt x 234.88023pt.
-<paper_files/figure-latex/m-4.pdf, id=89, 722.7pt x 361.35pt>
+<paper_files/figure-latex/m-4.pdf, id=92, 722.7pt x 361.35pt>
 File: paper_files/figure-latex/m-4.pdf Graphic file (type pdf)
 <use paper_files/figure-latex/m-4.pdf>
-Package pdftex.def Info: paper_files/figure-latex/m-4.pdf  used on input line 210.
+Package pdftex.def Info: paper_files/figure-latex/m-4.pdf  used on input line 214.
 (pdftex.def)             Requested size: 469.76045pt x 234.88023pt.
-[2] [3 <./paper_files/figure-latex/characteristics-1.pdf>] [4 <./paper_files/figure-latex/LegalVSIllegal-1.pdf> <./paper_files/figure-latex/m-1.pdf>] [5 <./paper_files/figure-latex/m-2.pdf> <./paper_files/figure-latex/m-3.pdf>] [6 <./paper_files/figure-latex/m-4.pdf>]
+[3 <./paper_files/figure-latex/m-1.pdf>] [4 <./paper_files/figure-latex/characteristics-1.pdf>] [5 <./paper_files/figure-latex/LegalVSIllegal-1.pdf> <./paper_files/figure-latex/m-2.pdf>] [6 <./paper_files/figure-latex/m-3.pdf> <./paper_files/figure-latex/m-4.pdf>] [7]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 239.
-[7] [8] [9] (./paper.aux)
+(Font)              <7> on input line 243.
+[8] [9] [10] (./paper.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -526,18 +523,18 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: 3CA45AE073458D2099DE2AB0847DF262;2762.
  ) 
 Here is how much of TeX's memory you used:
- 11305 strings out of 480238
- 177748 string characters out of 5894025
- 468901 words of memory out of 5000000
+ 11312 strings out of 480238
+ 177791 string characters out of 5894025
+ 465904 words of memory out of 5000000
  29009 multiletter control sequences out of 15000+600000
- 531658 words of font info for 78 fonts, out of 8000000 for 9000
+ 535921 words of font info for 79 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,6n,63p,782b,388s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}<c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb>
-Output written on paper.pdf (9 pages, 267773 bytes).
+ 60i,6n,63p,854b,391s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}<c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/Zoey/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb>
+Output written on paper.pdf (10 pages, 289798 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 190 compressed objects within 2 object streams
- 48 named destinations out of 1000 (max. 500000)
+ 254 PDF objects out of 1000 (max. 8388607)
+ 205 compressed objects within 3 object streams
+ 54 named destinations out of 1000 (max. 500000)
  143 words of extra memory for PDF output out of 10000 (max. 10000000)
 

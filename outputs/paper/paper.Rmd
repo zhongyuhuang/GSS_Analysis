@@ -25,7 +25,11 @@ data <- read.csv(f)
 
 # Introduction
 
-You can and should cross-reference sections and sub-sections. For instance, Section \@ref(data). R Markdown automatically makes the sections lower case and adds a dash to spaces to generate labels, for instance, Section \@ref(first-discussion-point). 
+There are three ways for individuals to define themselves: as distinct from others, based on their social groups or political groups, and according to their personal attributes[@id]. Such self-categorization changes over time, but highly related to one's attitudes. Groups with different features such as different age, gender, or education can have different opinions on certain issues. Currently, there are 18 states in the U.S that marijuana has been legalized. As a drug that can be tracked back in 1600, marijuana, has a dramatic history of its liberalization[@pbs]. Researches have shown that gender can drive a gap between support and not support the legalization of marijuana[@women]. Female tend to be less likely to support this idea[@women]. 
+
+This paper employs the data collected from the U.S General Social survey in 2021 and R to explore how the attitudes regard to marijuana legalization varies due to characteristics of individuals[@citeR][@GSS]. We look through gender, age, education, political parties and race of respondents to verify if any of them leads to significant differences[@citeLahman] [@thereferencecanbewhatever].
+
+Results indicates that individuals from different age groups and political parties present different attitudes of marijuana legalization. Strong democrat takes up the largest portion of the population who support it. At the same time, younger generations tend to show positive feedback than the older generation. Interestingly, it is evident that the gap resulted from gender shrinks over time. 
 
 
 
@@ -33,7 +37,7 @@ You can and should cross-reference sections and sub-sections. For instance, Sect
 
 ## The dataset
 
-The data used here is obtained and merged based on the 2021 U.S General Social Survey. Our data set stores responses of 4032 participants who answered a GSS questionnaire from December 2020 to May 2021. We recode and create the following nine variables of interest that is used in our analysis:
+The data used here is obtained and merged based on the 2021 U.S General Social Survey[@GSS]. Our data set stores responses of 4032 participants who answered a GSS questionnaire from December 2020 to May 2021[@GSS]. We recode and create the following nine variables of interest that is used in our analysis:
 
 - year: indicates the year for the respondent.
 - Gender: indicates the gender of the respondent (female, male, transgender, none of these).
@@ -47,9 +51,9 @@ The data used here is obtained and merged based on the 2021 U.S General Social S
 
 ## The Survey and its methodology
 
-The General Social Survey (GSS) in the U.S is a national-wide survey that studies any trends of attitudes or opinions on American society [@GSS]. Its questionnaire covers lots of topics such as crime, civil liberties, morality and so on. Respondents are required be to be 18 or older who live in the United States at the time of interviewing. They are sampled based on address.
+The General Social Survey (GSS) in the U.S is a national-wide survey that studies any trends of attitudes or opinions on American society [@GSS]. Its questionnaire covers lots of topics such as crime, civil liberties, morality and so on[@GSS]. Respondents are required be to be 18 or older who live in the United States at the time of interviewing[@GSS]. They are sampled based on address[@GSS].
 
-During the COVID-19 pandemic, the GSS had changed its methodology from in-person interview to the push-to-web method. While the option of interviewing on phone remains available, participants can also obtain the survey through the web link that had been mailed to their houses. Different from in-person data collecting, the self-administered questionnaire based on web provides the "skip" option when respondents are not willing to answer specific questions. Initially, options like "No answer" or "Don't know" are not included in the in-person interview. But the interviewer can make a record when respondents do not want to answer specific questions.   
+During the COVID-19 pandemic, the GSS had changed its methodology from in-person interview to the push-to-web method[@GSS]. While the option of interviewing on phone remains available, participants can also obtain the survey through the web link that had been mailed to their houses. Different from in-person data collecting, the self-administered questionnaire based on web provides the "skip" option when respondents are not willing to answer specific questions[@GSS]. Initially, options like "No answer" or "Don't know" are not included in the in-person interview. But the interviewer can make a record when respondents do not want to answer specific questions[@GSS].   
 
 ## Weakness and strength of the survey and the questionnaire
 
