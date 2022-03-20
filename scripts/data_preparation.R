@@ -27,7 +27,7 @@ reduced_data <-
 rm(raw_data)
 
 # recode gender variable based on the codebook "GSS 2021 Codebook R1b.pdf"
-reduced_data <- 
+reduced_data1 <- 
   reduced_data %>% 
   mutate(Gender = case_when(
     Gender == 1 ~ "Male",
@@ -37,8 +37,8 @@ reduced_data <-
   ))
 
 # recode race variable
-reduced_data <- 
-  reduced_data %>% 
+reduced_data2 <- 
+  reduced_data1 %>% 
   mutate(Race = case_when(
     raceacs1 == 1 ~ "White",
     raceacs2 == 1 ~ "Black",
@@ -59,8 +59,8 @@ reduced_data <-
   ))
 
 # create party variable
-reduced_data <- 
-  reduced_data %>% 
+reduced_data3 <- 
+  reduced_data2 %>% 
   mutate(Party = case_when(
     partyid == 0 ~ "STRONG DEMOCRAT",
     partyid == 1 ~ "NOT VERY STRONG DEMOCRAT",
@@ -73,8 +73,8 @@ reduced_data <-
 
 
 # create Degree variable
-reduced_data <- 
-  reduced_data %>% 
+reduced_data4 <- 
+  reduced_data3 %>% 
   mutate(Degree = case_when(
     degree == 0 ~ "LESS THAN HIGH SCHOOL",
     degree == 1 ~ "HIGH SCHOOL",
@@ -86,16 +86,16 @@ reduced_data <-
 
 
 # create LegalVSIllegal variable
-reduced_data <- 
-  reduced_data %>% 
+reduced_data5 <- 
+  reduced_data4 %>% 
   mutate(LegalVSIllegal = case_when(
     grassv == 1 ~ "SHOULD BE LEGAL",
     grassv == 2 ~ "SHOULD NOT BE LEGAL",
   ))
 
 # create Spend variable
-reduced_data <- 
-  reduced_data %>% 
+reduced_data6 <- 
+  reduced_data5 %>% 
   mutate(Spend = case_when(
     natdrug == 1 ~ "Too little",
     natdrug == 2 ~ "About right",
@@ -104,12 +104,12 @@ reduced_data <-
 
 
 # keep new variables that may be of interest 
-reduced_data <- 
-  reduced_data %>% 
+reduced_data7 <- 
+  reduced_data6 %>% 
   select(year, 
          Gender, age, Degree, Race ,Party, Spend, LegalVSIllegal)
 
 #### Save the data ####
 
-write.csv(reduced_data, "outputs/data/prepared_gss.csv")
+write.csv(reduced_data7, "outputs/data/prepared_gss.csv")
          
