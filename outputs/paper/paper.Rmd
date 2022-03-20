@@ -15,6 +15,9 @@ bibliography: references.bib
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
+#install.packages('gridExtra')
+library(gridExtra)
+library(ggplot2)
 # read the prepared data (stored in outputs/data/prepared_gss.csv)
 f <- file.choose()
 data <- read.csv(f)
@@ -44,15 +47,18 @@ The data used here is obtained and merged based on the 2021 U.S General Social S
 
 ## The Survey and its methodology
 
-The General Social Survey (GSS) in the U.S is a national-wide survey that studies any trends of attitudes or opinions on American society. Its questionnaire covers lots of topics such as crime, civil liberties, morality and so on. Respondents are required be to be 18 or older who live in the United States at the time of interviewing.
+The General Social Survey (GSS) in the U.S is a national-wide survey that studies any trends of attitudes or opinions on American society [@GSS]. Its questionnaire covers lots of topics such as crime, civil liberties, morality and so on. Respondents are required be to be 18 or older who live in the United States at the time of interviewing. They are sampled based on address.
 
-During the COVID-19 pandemic, the GSS had changed its methodology from in-person interview to the push-to-web method. While the option of interviewing on phone remains available, participants can also obtain the survey through the web link that had been mailed to their houses. Different from in-person data collecting, the web survey provides the "skip" option when respondents are not willing to answer specific questions.    
+During the COVID-19 pandemic, the GSS had changed its methodology from in-person interview to the push-to-web method. While the option of interviewing on phone remains available, participants can also obtain the survey through the web link that had been mailed to their houses. Different from in-person data collecting, the self-administered questionnaire based on web provides the "skip" option when respondents are not willing to answer specific questions. Initially, options like "No answer" or "Don't know" are not included in the in-person interview. But the interviewer can make a record when respondents do not want to answer specific questions.   
 
-## weakness and strength of the survey
+## Weakness and strength of the survey and the questionnaire
 
 Strength:
 
--
+- The survey covers wide range of topics which can provides informative trends of opinions or behaviors on the society.
+- Methods used in designing the survey enabled objectivity.
+- It is quick to gather large amount of information through questionnaires.
+- The transformation from in-person interview to web survey provides Convenience and safety during the pandemic. 
 
 
 Weakness:
@@ -61,62 +67,63 @@ Weakness:
 - Although the push-to-web methodology ensure the safety of both the interviewers and respondents, such a method might unintentionally set restrictions on respondents. For example, individuals are required to have some basic knowledge of computers.
 - It is harder for web survey to achieve accurate information from respondents compared to the in-person interview. It is uncertain that who is really answering the questionnaire.
 - It might be more incentive for participants give random or false responds during the web survey compared to the in-person method.
+- Length of the questionnaire might be too long for participant to answer patiently.
+- Changes in response can not be tracked.
 
-
-
-Our data is of penguins (Figure \@ref(fig:bills)).
-
-```{r bills, fig.cap="Bills of penguins", echo = FALSE, fig.height=5, fig.width=5}
-ggplot(data, aes(x=Gender)) + geom_bar() +  labs(x='Gender')
-ggplot(data, aes(x=Spend)) + geom_bar() +  labs(x='Spend')
-ggplot(data, aes(x=LegalVSIllegal)) + geom_bar() +  labs(x='Legal or not ')
-ggplot(data, aes(x=Party)) + geom_bar() +  labs(x='Party')
-mosaicplot(LegalVSIllegal~Gender,data=data)
-mosaicplot(LegalVSIllegal~Party,data=data)
-mosaicplot(Spend~Gender,data=data)
-mosaicplot(LegalVSIllegal~Degree,data=data)
-ggplot(data, aes(x=LegalVSIllegal, y=age)) +
-  geom_boxplot(fill='steelblue')
-```
-
-Talk more about it.
-
-Also bills and their average (Figure \@ref(fig:billssssss)). (Notice how you can change the height and width so they don't take the whole page?)
-
-```{r billssssss, fig.cap="More bills of penguins", echo = FALSE, fig.width=8, fig.height=4}
-
-# This needs to be about the random data tha tI sasmpled?
-
-```
-
-Talk way more about it. 
-
-
-
-# Model
-
-\begin{equation}
-Pr(\theta | y) = \frac{Pr(y | \theta) Pr(\theta)}{Pr(y)}  (\#eq:bayes)
-\end{equation}
-
-Equation \@ref(eq:bayes) seems useful, eh?
-
-Here's a dumb example of how to use some references: In paper we run our analysis in `R` [@citeR]. We also use the `tidyverse` which was written by @thereferencecanbewhatever If we were interested in baseball data then @citeLahman could be useful. 
-
-We can use maths by including latex between dollar signs, for instance $\theta$.
 
 
 # Results
 
+The histograms below have shown the composition of the respondents. (Figure \@ref(fig:characteristics)). Generation X (35-50) and the silent (70-87) who identify themselves as white make up the largest portion of the respondents. Half of the participants are female. If we view them according to their favor of political party, we can see most of them think themselves as independent or strong democrat. 
+
+
+```{r characteristics, fig.cap="visualization of characteristics of respondents", echo = FALSE, fig.height=10, fig.width=10, warning=FALSE}
+#make bar plot of gender
+p1<- ggplot(data, aes(x=Gender)) + geom_bar() +  labs(x='Gender')
+#make bar plot of age
+p2<- ggplot(data, aes(x=age)) +geom_bar()
+#make bar plot of race
+p3<-ggplot(data, aes(x=Race)) + geom_bar() +  labs(x='Degree') +
+  theme(axis.text.x = element_text(angle = 90))
+#make bar plot of party
+p4<-ggplot(data, aes(x=Party)) + geom_bar() + labs(x='Party')+ theme(axis.text.x = element_text(angle = 90))
+#arrange four plots
+grid.arrange(p1,p2,p3,p4)
+```
+
+
+The majority of responses regarding to whether the marijuana should be legal or not fall on not applicable(Figure \@ref(fig:LegalVSIllegal)). Despite that, the number of individuals that support the legalization of marijuana is approximately 3.5 times larger than those who disagree of the legalization. The majority of the supporters have these characteristics: female, strong democrat, obtain high school degree, at a younger age(approximately 35). The majority of the opponents have these characteristics: female,independent, obtain high school degree, at a relatively higher age(approximately 65)(Figure \@ref(fig:m)). 
+
+
+```{r LegalVSIllegal, fig.cap="Opinions on legalization of marijuana", echo = FALSE, fig.height=3, fig.width=5, warning=FALSE}
+# make bar plot of LegalVSIllegal
+ggplot(data=data, aes(x=LegalVSIllegal)) + geom_bar() +  labs(x='Opinions on legalization of marijuana')
+```
+
+
+```{r m, fig.cap="characteristics of majorities", echo = FALSE, fig.height=5, fig.width=10, warning=FALSE}
+
+#make bar plot of gender group by LegalVSIllegal
+ggplot(data, aes(x=Gender)) + geom_bar() +  labs(x='Gender')+ facet_wrap(~LegalVSIllegal)
+#make bar plot of race group by LegalVSIllegal
+ggplot(data, aes(x=Race)) + geom_bar() +  labs(x='Race')+ facet_wrap(~LegalVSIllegal)+ theme(axis.text.x = element_text(angle = 90))
+#make bar plot of degree group by LegalVSIllegal
+ggplot(data, aes(x=Degree)) + geom_bar() +  labs(x='Degree')+ facet_wrap(~LegalVSIllegal)+ theme(axis.text.x = element_text(angle = 90))
+#make bar plot of age group by LegalVSIllegal
+ggplot(data, aes(x=age)) + geom_bar() +  labs(x='Age')+ facet_wrap(~LegalVSIllegal)
+
+```
+
+
 # Discussion
 
-## First discussion point
+## Significant different in opinion on marijuana legalization by favor of political parties
 
 If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
 
-## Second discussion point
+## Significant different in opinion on marijuana legalization by age group
 
-## Third discussion point
+## The spend on dealing with drug addiction
 
 ## Weaknesses and next steps
 
