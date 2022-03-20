@@ -1,9 +1,8 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
+title: "Opponents and Supporters of Marijuana Legalization"
+subtitle: "Supporters and Opponents of Marijuana Legalization"
 author: 
   - Zhongyu Huang
-  - Another author
 thanks: "Code and data are available at: https://github.com/zhongyuhuang/GSS_Analysis.git"
 date: "`r format(Sys.time(), '%19 %3 %2022')`"
 abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
@@ -15,9 +14,10 @@ bibliography: references.bib
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-
 library(tidyverse)
-library(palmerpenguins)
+# read the prepared data (stored in outputs/data/prepared_gss.csv)
+f <- file.choose()
+data <- read.csv(f)
 ```
 
 # Introduction
@@ -28,10 +28,35 @@ You can and should cross-reference sections and sub-sections. For instance, Sect
 
 # Data
 
+The data used here is obtained and merged based on the 2021 U.S General Social Survey. Our data set stores responses of 4032 participants who answered a GSS questionnaire from December 2020 to May 2021. We recode and create the following nine variables of interest that is used in our analysis:
+
+- year: indicates the year for the respondent.
+- Gender: indicates the gender of the respondent (female, male, transgender, none of these).
+- age: indicates age of the respondent.
+- Degree: respondent's degree (less than high school, high school, associate/junior college, bachelors, graduate).
+- Race: indicates the race that the respondent considers her/himself (white, black, American indian or alaska native, Asian Indian, Chinese, Filipino, Japanese, Korean, Vietnamese, Other Asian, Native hawaiian, Guamanian or chamorro, Samoan, Other pacifis islander, Some other race, Hispanic).
+- Party: indicates how do respondents usually think of themselves as a Republican,Democrat, or Independent (strong democrat, not very strong democrat, independent close to democrat, independent(neither or no response), independent close to republican, not very stong republican, strong republican).
+- LegalVSIllegal: indicates whether respondents think the use of marijuana should be made legal or not (should be legal, should not be legal).
+- Spend: indicates how do respondents think of the government's spend on dealing with drug addiction (too little, about right, too much).
+
+
+## Survey's methodology
+
+## weakness and strength of the survey
+
 Our data is of penguins (Figure \@ref(fig:bills)).
 
-```{r bills, fig.cap="Bills of penguins", echo = FALSE}
-
+```{r bills, fig.cap="Bills of penguins", echo = FALSE, fig.height=5, fig.width=5}
+ggplot(data, aes(x=Gender)) + geom_bar() +  labs(x='Gender')
+ggplot(data, aes(x=Spend)) + geom_bar() +  labs(x='Spend')
+ggplot(data, aes(x=LegalVSIllegal)) + geom_bar() +  labs(x='Legal or not ')
+ggplot(data, aes(x=Party)) + geom_bar() +  labs(x='Party')
+mosaicplot(LegalVSIllegal~Gender,data=data)
+mosaicplot(LegalVSIllegal~Party,data=data)
+mosaicplot(Spend~Gender,data=data)
+mosaicplot(LegalVSIllegal~Degree,data=data)
+ggplot(data, aes(x=LegalVSIllegal, y=age)) +
+  geom_boxplot(fill='steelblue')
 ```
 
 Talk more about it.
@@ -82,6 +107,13 @@ Weaknesses and next steps should also be included.
 \appendix
 
 # Appendix {-}
+survey link:
+
+## Preamble:
+
+purpose of the survey
+
+## Questions
 
 
 # Additional details
