@@ -28,6 +28,8 @@ You can and should cross-reference sections and sub-sections. For instance, Sect
 
 # Data
 
+## The dataset
+
 The data used here is obtained and merged based on the 2021 U.S General Social Survey. Our data set stores responses of 4032 participants who answered a GSS questionnaire from December 2020 to May 2021. We recode and create the following nine variables of interest that is used in our analysis:
 
 - year: indicates the year for the respondent.
@@ -40,9 +42,27 @@ The data used here is obtained and merged based on the 2021 U.S General Social S
 - Spend: indicates how do respondents think of the government's spend on dealing with drug addiction (too little, about right, too much).
 
 
-## Survey's methodology
+## The Survey and its methodology
+
+The General Social Survey (GSS) in the U.S is a national-wide survey that studies any trends of attitudes or opinions on American society. Its questionnaire covers lots of topics such as crime, civil liberties, morality and so on. Respondents are required be to be 18 or older who live in the United States at the time of interviewing.
+
+During the COVID-19 pandemic, the GSS had changed its methodology from in-person interview to the push-to-web method. While the option of interviewing on phone remains available, participants can also obtain the survey through the web link that had been mailed to their houses. Different from in-person data collecting, the web survey provides the "skip" option when respondents are not willing to answer specific questions.    
 
 ## weakness and strength of the survey
+
+Strength:
+
+-
+
+
+Weakness:
+
+- The sample size of 4,032 completes of this survey might not be large enough to be served as a national-wide survey that claimed by GSS.
+- Although the push-to-web methodology ensure the safety of both the interviewers and respondents, such a method might unintentionally set restrictions on respondents. For example, individuals are required to have some basic knowledge of computers.
+- It is harder for web survey to achieve accurate information from respondents compared to the in-person interview. It is uncertain that who is really answering the questionnaire.
+- It might be more incentive for participants give random or false responds during the web survey compared to the in-person method.
+
+
 
 Our data is of penguins (Figure \@ref(fig:bills)).
 
