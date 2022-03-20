@@ -16,7 +16,7 @@ library(tidyverse)
 # Read in the raw data. 
 raw_data <- haven::read_dta("inputs/data/2021_stata/gss2021.dta")
 
-
+####Data preparation ####
 # Just keep some variables that may be of interest 
 reduced_data <- 
   raw_data %>% 
@@ -26,7 +26,7 @@ reduced_data <-
          raceacs13, raceacs14, raceacs15, raceacs16,partyid, natdrug, grassv) %>% rename(Gender = sexnow1)
 rm(raw_data)
 
-# recode gender variable
+# recode gender variable based on the codebook "GSS 2021 Codebook R1b.pdf"
 reduced_data <- 
   reduced_data %>% 
   mutate(Gender = case_when(
@@ -36,7 +36,7 @@ reduced_data <-
     Gender == 4 ~ "None of these"
   ))
 
-# create race variable
+# recode race variable
 reduced_data <- 
   reduced_data %>% 
   mutate(Race = case_when(
@@ -85,7 +85,6 @@ reduced_data <-
   ))
 
 
-
 # create LegalVSIllegal variable
 reduced_data <- 
   reduced_data %>% 
@@ -104,11 +103,13 @@ reduced_data <-
   ))
 
 
-# Just keep some variables that may be of interest 
+# keep new variables that may be of interest 
 reduced_data <- 
   reduced_data %>% 
   select(year, 
          Gender, age, Degree, Race ,Party, Spend, LegalVSIllegal)
 
+#### Save the data ####
 
+write.csv(reduced_data, "outputs/data/prepared_gss.csv")
          
