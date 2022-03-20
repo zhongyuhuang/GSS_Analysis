@@ -5,7 +5,7 @@ author:
   - Zhongyu Huang
 thanks: "Code and data are available at: https://github.com/zhongyuhuang/GSS_Analysis.git"
 date: "`r format(Sys.time(), '%19 %3 %2022')`"
-abstract: "In 2021, marijuana had been legalized in 18 states in the U.S. However, the debate of the pros and cons for this legalization had never stopped. Who is supporting or not supporting? This paper aims to use the data collected from the U.S General Social Survey in 2021 to determine the characteristics differ between the supportors and opponents. Results have shown Significant differences among them by age and political party. "
+abstract: "In 2021, marijuana had been legalized in 18 states in the U.S. However, the debate of the pros and cons for this legalization had never stopped. Who is supporting or not supporting? This paper aims to use the data collected from the U.S General Social Survey in 2021 to determine the characteristics differ between the supporters and opponents. Results have shown Significant differences among them by age and political party. "
 output:
   bookdown::pdf_document2
 toc: FALSE
@@ -125,6 +125,7 @@ If my paper were 10 pages, then should be be at least 2.5 pages. The discussion 
 
 ## The spend on dealing with drug addiction
 
+
 ## Weaknesses and next steps
 
 The number of responses used in the analysis is relatively small. Besides, majority of the responses for some variables fall on not applicable. These might cause inaccurate of the conclusion made based on them. Regarding the race, we can see that white takes up almost 80% of the respondents. It might indicates the oneness of participants or errors in the sampling method. The survey only include one question about the legalization of marijuana. In order to obtain a deeper understanding of respondents' opinion about this, we can include related questions such as "What is the reason for you to (not) think marijuana should be legalized". A larger size of respond might help shape the characteristics of supporters and opponents more accurately.
@@ -134,17 +135,66 @@ The number of responses used in the analysis is relatively small. Besides, major
 \appendix
 
 # Appendix {-}
-survey link:
+the supplemental survey link: https://forms.gle/tHJZ46Zwc45LJDLy5
 
-## Preamble:
+Opinions on legalization of marijuana
 
-purpose of the survey
+In 2021, marijuana had been legalized in 18 states in the U.S. However, the debate of the pros and cons for this legalization had never stopped. What is your opinion.
+This survey is voluntary. You may choose to skip when having questions that you do not want to answer. By answering this survey, you understand that the General social survey will be using your responds. Your answers will be kept private. 
+Thanks for taking this survey.
+
 
 ## Questions
 
+1. Your Gender is:
 
-# Additional details
+- Male
+- Female
+- Transgender
+- None of these
 
+2. Generally speaking, do you usually think of your self as:
+
+- Strong democrat
+- Not very strong democrat
+- Independent
+- Not very strong republican
+- Strong republican
+- None of these
+
+3. Your Age is:
+
+- 18-30
+- 31-55
+- 56-75
+- 76-95
+- 95 or older
+
+4. Your race is:
+
+- White
+- Black or African American
+- American Indian or Alaska Native
+- Asian
+- Native Hawaiian or Other Pacific Islander
+- None of these
+
+5. Should marijuana be legalized?
+
+- Yes
+- No
+- Maybe
+
+6. If No, which reason most support your opinion? 
+
+- Marijuana is an addictive, harmful to body and brain.
+- It hurts society.
+
+7. If Yes, which reason most support your opinion?
+
+- Lead to increase in government's revenues
+- Lead to decrease in crime and safer neighborhoods
+- Lead to more effective in controlling the drug usage
 
 \newpage
 
