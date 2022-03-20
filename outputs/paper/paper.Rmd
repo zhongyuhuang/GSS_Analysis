@@ -127,7 +127,7 @@ If my paper were 10 pages, then should be be at least 2.5 pages. The discussion 
 
 ## Weaknesses and next steps
 
-Weaknesses and next steps should also be included.
+The number of responses used in the analysis is relatively small. Besides, majority of the responses for some variables fall on not applicable. These might cause inaccurate of the conclusion made based on them. Regarding the race, we can see that white takes up almost 80% of the respondents. It might indicates the oneness of participants or errors in the sampling method. The survey only include one question about the legalization of marijuana. In order to obtain a deeper understanding of respondents' opinion about this, we can include related questions such as "What is the reason for you to (not) think marijuana should be legalized". A larger size of respond might help shape the characteristics of supporters and opponents more accurately.
 
 \newpage
 
