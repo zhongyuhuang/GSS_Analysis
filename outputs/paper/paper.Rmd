@@ -1,11 +1,11 @@
 ---
 title: "Opponents and Supporters of Marijuana Legalization"
-subtitle: "Supporters and Opponents of Marijuana Legalization"
+subtitle: "Significant differences in opinion on marijuana legalization by age and political party"
 author: 
   - Zhongyu Huang
 thanks: "Code and data are available at: https://github.com/zhongyuhuang/GSS_Analysis.git"
 date: "`r format(Sys.time(), '%19 %3 %2022')`"
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "In 2021, marijuana had been legalized in 18 states in the U.S. However, the debate of the pros and cons for this legalization had never stopped. Who is supporting or not supporting? This paper aims to use the data collected from the U.S General Social Survey in 2021 to determine the characteristics differ between the supportors and opponents. Results have shown Significant differences among them by age and political party. "
 output:
   bookdown::pdf_document2
 toc: FALSE
