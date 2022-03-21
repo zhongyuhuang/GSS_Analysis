@@ -4,7 +4,7 @@ subtitle: "Significant differences in opinion on marijuana legalization by age a
 author: 
   - Zhongyu Huang
 thanks: "Code and data are available at: https://github.com/zhongyuhuang/GSS_Analysis.git"
-date: "`r format(Sys.time(), '%19 %3 %2022')`"
+date: "19 March, 2022"
 abstract: "In 2021, marijuana had been legalized in 18 states in the U.S. However, the debate of the pros and cons for this legalization had never stopped. Who is supporting or not supporting? This paper aims to use the data collected from the U.S General Social Survey in 2021 to determine the characteristics differ between the supporters and opponents. Results have shown Significant differences among them by age and political party. "
 output:
   bookdown::pdf_document2
@@ -25,12 +25,11 @@ data <- read.csv(f)
 
 # Introduction
 
-There are three ways for individuals to define themselves: as distinct from others, based on their social groups or political groups, and according to their personal attributes[@id]. Such self-categorization changes over time, but highly related to one's attitudes. Groups with different features such as different age, gender, or education can have different opinions on certain issues. Currently, there are 18 states in the U.S that marijuana has been legalized. As a drug that can be tracked back in 1600, marijuana, has a dramatic history of its liberalization[@pbs]. Researches have shown that gender can drive a gap between support and not support the legalization of marijuana[@women]. Female tend to be less likely to support this idea[@women]. 
+There are three ways for individuals to define themselves: as distinct from others, based on their social groups or political groups, and according to their personal attributes[@id]. Such self-categorization changes over time, but is highly related to one's attitudes. Groups with different features such as different ages, gender, or education can have different opinions on certain issues. Currently, there are 18 states in the U.S where marijuana has been legalized. As a drug that can be traced back to 1600, marijuana, has a dramatic history of its liberalization[@pbs]. Research has shown that gender can drive a gap between support and not supporting the legalization of marijuana[@women]. Females tend to be less likely to support this idea[@women]. 
 
-This paper employs the data collected from the U.S General Social survey in 2021 and R to explore how the attitudes regard to marijuana legalization varies due to characteristics of individuals[@citeR][@GSS]. We look through gender, age, education, political parties and race of respondents to verify if any of them leads to significant differences[@citeLahman] [@thereferencecanbewhatever].
+This paper employs the data collected from the U.S General Social survey in 2021 and R to explore how the attitudes regard to marijuana legalization vary due to characteristics of individuals[@citeR][@GSS]. We look through gender, age, education, political parties, and race of respondents to verify if any of them leads to significant differences[@citeLahman] [@thereferencecanbewhatever].
 
-Results indicates that individuals from different age groups and political parties present different attitudes of marijuana legalization. Strong democrat takes up the largest portion of the population who support it. At the same time, younger generations tend to show positive feedback than the older generation. Interestingly, it is evident that the gap resulted from gender shrinks over time. 
-
+Results indicate that individuals from different age groups and political parties present different attitudes toward marijuana legalization. Strong democrat takes up the largest portion of the population who support it. At the same time, younger generations tend to show more positive feedback than the older generation. Interestingly, it is evident that the gap resulting from gender shrinks over time. 
 
 
 # Data
@@ -51,26 +50,26 @@ The data used here is obtained and merged based on the 2021 U.S General Social S
 
 ## The Survey and its methodology
 
-The General Social Survey (GSS) in the U.S is a national-wide survey that studies any trends of attitudes or opinions on American society [@GSS]. Its questionnaire covers lots of topics such as crime, civil liberties, morality and so on[@GSS]. Respondents are required be to be 18 or older who live in the United States at the time of interviewing[@GSS]. They are sampled based on address[@GSS].
+The General Social Survey (GSS) in the U.S is a national-wide survey that studies any trends of attitudes or opinions on American society [@GSS]. Its questionnaire covers lots of topics such as crime, civil liberties, morality, and so on[@GSS]. Respondents are required to be 18 or older and live in the United States at the time of interviewing[@GSS]. They are sampled based on address[@GSS].
 
-During the COVID-19 pandemic, the GSS had changed its methodology from in-person interview to the push-to-web method[@GSS]. While the option of interviewing on phone remains available, participants can also obtain the survey through the web link that had been mailed to their houses. Different from in-person data collecting, the self-administered questionnaire based on web provides the "skip" option when respondents are not willing to answer specific questions[@GSS]. Initially, options like "No answer" or "Don't know" are not included in the in-person interview. But the interviewer can make a record when respondents do not want to answer specific questions[@GSS].   
+During the COVID-19 pandemic, the GSS had changed its methodology from in-person interviews to the push-to-web method[@GSS]. While the option of interviewing on phone remains available, participants can also obtain the survey through the web link that had been mailed to their houses. Different from in-person data collecting, the self-administered questionnaire based on the web provides the "skip" option when respondents are not willing to answer specific questions[@GSS]. Initially, options like "No answer" or "Don't know" are not included in the in-person interview. But the interviewer can make a record when respondents do not want to answer specific questions[@GSS]. 
 
 ## Weakness and strength of the survey and the questionnaire
 
 Strength:
 
-- The survey covers wide range of topics which can provides informative trends of opinions or behaviors on the society.
+- The survey covers a wide range of topics which can provide informative trends of opinions or behaviors on the society.
 - Methods used in designing the survey enabled objectivity.
-- It is quick to gather large amount of information through questionnaires.
+- It is quick to gather a large amount of information through questionnaires.
 - The transformation from in-person interview to web survey provides Convenience and safety during the pandemic. 
 
 
 Weakness:
 
-- The sample size of 4,032 completes of this survey might not be large enough to be served as a national-wide survey that claimed by GSS.
-- Although the push-to-web methodology ensure the safety of both the interviewers and respondents, such a method might unintentionally set restrictions on respondents. For example, individuals are required to have some basic knowledge of computers.
-- It is harder for web survey to achieve accurate information from respondents compared to the in-person interview. It is uncertain that who is really answering the questionnaire.
-- It might be more incentive for participants give random or false responds during the web survey compared to the in-person method.
+- The sample size of 4,032 completes of this survey might not be large enough to be served as a national-wide survey claimed by GSS.
+- Although the push-to-web methodology ensures the safety of both the interviewers and respondents, such a method might unintentionally set restrictions on respondents. For example, individuals are required to have some basic knowledge of computers.
+- It is harder for web surveys to achieve accurate information from respondents compared to the in-person interview. It is uncertain who is really answering the questionnaire.
+- It might be more incentive for participants to give random or false responses during the web survey compared to the in-person method.
 - Length of the questionnaire might be too long for participant to answer patiently.
 - Changes in response can not be tracked.
 
@@ -78,7 +77,7 @@ Weakness:
 
 # Results
 
-The histograms below have shown the composition of the respondents. (Figure \@ref(fig:characteristics)). Generation X (35-50) and the silent (70-87) who identify themselves as white make up the largest portion of the respondents. Half of the participants are female. If we view them according to their favor of political party, we can see most of them think themselves as independent or strong democrat. 
+The histograms below have shown the composition of the respondents. (Figure \@ref(fig:characteristics)). Generation X (35-50) and the silent (70-87) who identify themselves as white make up the largest portion of the respondents. Half of the participants are female. If we view them according to their favorite political party, we can see most of them think of themselves as the independent or strong democrat. 
 
 
 ```{r characteristics, fig.cap="visualization of characteristics of respondents", echo = FALSE, fig.height=10, fig.width=10, warning=FALSE}
@@ -96,7 +95,7 @@ grid.arrange(p1,p2,p3,p4)
 ```
 
 
-The majority of responses regarding to whether the marijuana should be legal or not fall on not applicable(Figure \@ref(fig:LegalVSIllegal)). Despite that, the number of individuals that support the legalization of marijuana is approximately 3.5 times larger than those who disagree of the legalization. The majority of the supporters have these characteristics: female, strong democrat, obtain high school degree, at a younger age(approximately 35). The majority of the opponents have these characteristics: female,independent, obtain high school degree, at a relatively higher age(approximately 65)(Figure \@ref(fig:m)). 
+The majority of responses regarding whether marijuana should be legal or not fall on not applicable(Figure \@ref(fig:LegalVSIllegal)). Despite that, the number of individuals that support the legalization of marijuana is approximately 3.5 times larger than those who disagree with the legalization. The majority of the supporters have these characteristics: female, the strong democrat, obtain high school degree, at a younger age(approximately 35). The majority of the opponents have these characteristics: female, the independent, obtain high school degree, at a relatively higher age(approximately 65). 
 
 
 ```{r LegalVSIllegal, fig.cap="Opinions on legalization of marijuana", echo = FALSE, fig.height=3, fig.width=5, warning=FALSE}
@@ -105,7 +104,9 @@ ggplot(data=data, aes(x=LegalVSIllegal)) + geom_bar() +  labs(x='Opinions on leg
 ```
 
 
-```{r m, fig.cap="characteristics of majorities", echo = FALSE, fig.height=5, fig.width=10, warning=FALSE}
+
+
+```{r L1, fig.cap="Histogram by groups", echo = FALSE, fig.height=5, fig.width=10, warning=FALSE}
 
 #make bar plot of gender group by LegalVSIllegal
 ggplot(data, aes(x=Gender)) + geom_bar() +  labs(x='Gender')+ facet_wrap(~LegalVSIllegal)
@@ -115,20 +116,24 @@ ggplot(data, aes(x=Race)) + geom_bar() +  labs(x='Race')+ facet_wrap(~LegalVSIll
 ggplot(data, aes(x=Degree)) + geom_bar() +  labs(x='Degree')+ facet_wrap(~LegalVSIllegal)+ theme(axis.text.x = element_text(angle = 90))
 #make bar plot of age group by LegalVSIllegal
 ggplot(data, aes(x=age)) + geom_bar() +  labs(x='Age')+ facet_wrap(~LegalVSIllegal)
-
 ```
+
 
 
 # Discussion
 
-## Significant different in opinion on marijuana legalization by favor of political parties
+## Significant difference in opinion on marijuana legalization by favor of political parties and age.
 
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
+The two variables age and party are strongly influencing the attitudes of marijuana. It might indicate that the partisanship has become more relevant in explaining trends of opinions in society. The difference in political parties leads to different views of issues. It is not surprising that the distribution of support legalization skewed to the younger generation since they were born with the trend of liberalization of marijuana.  
 
-## Significant different in opinion on marijuana legalization by age group
 
 ## The spend on dealing with drug addiction
 
+It is ironic to find that the majority of the respondents believe the country is spending too little while they are supporting marijuana legalization. In fact, the United States has already spent a trillion dollars regarding the issue of drug addiction. The U.S has been fighting drugs since 1971, lots of anti-drug acts resulted from the drug war. Thus, although the transformation of thoughts on drugs is ongoing in an incredibly fast speed, the debates regarding this remain in society.
+```{r, echo=FALSE}
+#plot Spend
+ggplot(data, aes(x=Spend)) + geom_bar() +  labs(x='Spend on drug addiction')
+```
 
 ## Weaknesses and next steps
 
